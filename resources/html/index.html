@@ -1,0 +1,25 @@
+<div class="upload">
+
+    <h2>Upload a file</h2>
+    <form action="/" enctype="multipart/form-data" method="POST">
+        {% csrf-field %}
+        <input id="file" name="file" type="file" />
+        <input id="nick" name="nick" type="text" />
+        <input type="submit" value="upload" />
+    </form>
+</div>
+<div class="filter">
+    <form action="/" method="GET">
+        <input id="user" name="user" type="text" />
+        <input type="submit" value="filter" />
+    </form>
+</div>
+<div class="photos">
+    {% for p in photos %}
+    <img alt="" src="{{ p }}"/>
+    {% empty %}
+    <p>
+        User has no photos
+    </p>
+    {% endfor %}
+</div>

@@ -29,6 +29,7 @@
                  [ring/ring-core "1.6.3"]
                  [ring/ring-defaults "0.3.2"]
                  [amazonica "0.3.132"]
+                 [com.drewnoakes/metadata-extractor "2.10.1"]
                  [selmer "1.12.0"]]
 
   :min-lein-version "2.0.0"
